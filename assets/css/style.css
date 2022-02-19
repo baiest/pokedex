@@ -6,15 +6,12 @@
 
 html {
     font-size: 62.5%;
-}
-
-body {
-    background: lightblue;
+    scroll-behavior: smooth;
 }
 
 .container {
     margin: 5px;
-    height: 95vh;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,11 +23,18 @@ body {
 .title {
     background: lightgreen;
     padding: 10px 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title__icon {
+    width: 25px;
+    margin-right: 10px;
 }
 
 .title__text {
-    font-size: 1.5rem
+    font-size: 1.5rem;
 }
 
 .info {
@@ -44,16 +48,17 @@ body {
 
 .info__nombre {
     background: #fff;
-    font-size: 1.6rem;
-    padding: 2px 25px;
+    font-size: 2.4rem;
     text-align: center;
-    border-radius: 10px;
-    margin-top: 15px;
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateY(-12px);
 }
 
 .info__imagen {
     width: 80%;
     transform: translateY(25px);
+    transition: tranform .5s ease-in;
 }
 
 .info__imagen img {
@@ -62,23 +67,25 @@ body {
 }
 
 .info__stats {
-    padding: 25px;
+    padding: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
     background: lightblue;
-    margin-bottom: 10px;
-    width: 90%;
     min-width: 260px;
-    font-size: 1.4rem;
+    width: 100%;
+    font-size: 1.8rem;
 }
 
 .info__stats-item {
     list-style: none;
     display: flex;
+    justify-content: center;
+    margin: 5px;
 }
 
 .info__stats-item li {
-    width: 50%;
-    margin-right: 10px;
+    width: 30%;
+    margin: 8px 15px;
 }
 
 .options {
@@ -94,7 +101,7 @@ body {
 
 .options__btn {
     display: inline-block;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 25%;
     margin: 5px 15px;
 }
